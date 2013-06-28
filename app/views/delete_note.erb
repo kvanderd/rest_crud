@@ -1,0 +1,7 @@
+
+<form action="/delete/<%= @note.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="text" name="note[title]" value="<%= @note.title %>">
+  <textarea name="note[content]"><%= @note.content %></textarea>
+  <input type="submit" value="Delete">
+</form>

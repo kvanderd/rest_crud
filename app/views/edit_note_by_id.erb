@@ -1,0 +1,7 @@
+
+<form action="/edit/<%= @note.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="text" name="note[title]" value="<%= @note.title %>">
+  <textarea name="note[content]"><%= @note.content %></textarea>
+  <input type="submit" value="Edit This Note">
+</form>

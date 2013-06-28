@@ -1,0 +1,8 @@
+<% @all_notes.each do |note| %>
+
+<h4>Title:</h4><%= note.title %>
+<h4>Content:</h4><%= note.content %>
+<p>You can edit or delete this note:</p>
+<a href="/edit/<%= note.id %>">Edit</a>
+<a href="/delete/<%= note.id %>">Delete</a>
+<% end %>
