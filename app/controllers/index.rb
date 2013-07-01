@@ -6,7 +6,7 @@ end
 post '/' do
   puts params
   Note.create(params[:note])
-  redirect "/"
+  redirect "/all_notes"
 end
 
 
@@ -17,8 +17,6 @@ get "/all_notes" do
 end
 
 get "/edit/:id" do
-  p params
-  p "8" * 80
   @note = Note.find(params[:id])
   erb :edit_note_by_id
 end
@@ -31,7 +29,6 @@ end
 
 get "/delete/:id" do
   @note = Note.find(params[:id])
-  @title = "confrirm you want to delete note <%= @note.id %>"
   erb :delete_note
 end
 
